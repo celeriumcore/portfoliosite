@@ -5,6 +5,20 @@
     scroll-behavior:smooth;
 }
 
+@font-face {
+    font-family: Milker;
+    src: url(Fonts/MILKER.TTF) format(truetype);
+}
+
+@font-face {
+    font-family: Rosewind;
+    src: url(Fonts/ROSEWIND-REGULAR.TTF) format(truetype);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Fonts/POPPINS-LIGHT.TTF) format(truetype);
+}
 
 header {
     display: flex;
@@ -15,27 +29,25 @@ header {
     z-index: 20;
 }
 
-
 .home {
-    display: flex;
-    width: 50%;
-    align-items: center;
+width: 10%;
 }
 
 #menu li {
     list-style: none;
-    display: inline-block;
 }
 
 #menu li a {
     color: #ffffff;
     font-size: 20px;
-    font-family: 'Rosewind', sans-serif;
+    font-family: 'Rosewind' , sans-serif
 }
 
 .bar a{
     text-decoration: none;
     transition: .5s;
+    display: inline-block;
+    justify-content: space-evenly;
 }
 
 .bar a:hover{
@@ -44,9 +56,10 @@ text-shadow: #ffffff 0 0 8px;
 
 
 .logo {
-    width: 10%;
+    width: 50%;
+    scale: 10%;
     transition: .5s;
-    transform: translate(0,5px);
+    transform: translateX(-460%);
 }
 
 .logo:hover {
@@ -58,12 +71,12 @@ text-shadow: #ffffff 0 0 8px;
     width: 85%;
     height: 2px;
     position: relative;
-    left: 90px;
+    left: 7%;
     top: 79px;
 }
 
 h1 {
-    font-family: 'milker', sans-serif;
+    font-family: 'Milker', sans-serif;
     font-weight: lighter;
     font-size: 40px;
     display:block;
@@ -111,65 +124,40 @@ h1 {
     display: grid;
     align-items: center;
     gap: 140px;
-    position: relative;
-    left: -25px;
 }
 
 .cv {
     font-family: 'Rosewind', sans-serif;
     color: #ffffff;
     background-color: #a085be;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 200px;
-    right: -50px;
     width: 301px;
     height: 60px;
     transition: .25s;
-    border:none;
+    border: none;
+    position: absolute;
+    transform:translate(109.2%, 335%) scale(100%) ;
 }
 
 .cv:hover {
     background-color: #c9b2e2;
     color: #3a3a3a;
-    scale: 98%;
+    transform: translate(109.2%, 335%) scale(98%);
 }
 
-h2 {
-    width: 30%;
+p {
+    width: 20%;
     font-family: 'Poppins', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     font-style: oblique;
     text-transform: capitalize;
     font-size: 15px;
     color: white;
-    position: absolute;
-    transform: translateY(-50px);
-    right: 50px;
     z-index: 10;
 }
-
-h3 {
-    width: 30%;
-    font-family: 'Poppins', sans-serif;
-    font-weight:lighter;
-    font-size: 15px;
-    color: white;
-    position: absolute;
-    transform: translateY(100px);
-    right: 50px;
-    z-index: 10;
-}
-
 
 .moi {
-    position: relative;
+    position: static;
     z-index: -10;
-    right: -25px;
-    transform: translateY(-10px);
-    scale: 1;
     filter: drop-shadow(0 0 50px #a085be);
 }
 
@@ -178,7 +166,7 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: 'milker', sans-serif;
+    font-family: 'Milker', sans-serif;
     font-size: 32px;
     font-weight: lighter;
     list-style: none;
@@ -186,7 +174,10 @@ ul {
     width: 100%;
 }
 
-
+.navbar {
+    display: inline-block;
+    justify-content: space-evenly;
+}
 .nav{
     border-bottom-style: 0px solid;
     background-color: transparent;
@@ -210,17 +201,13 @@ font-size: 34px;
 
 section {
     height: 100vh;
+    width: 100%;
     border: 0px solid #ffffff;
     color: #ffffff;
     scroll-snap-align: start;
 }
 
-.wrap {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-}
-
-#apropos, #contact, #projets {
+#contact, #projets {
     width: 100%;
     height: 100vh;
     border: 0px solid #ffffff;
@@ -228,6 +215,15 @@ section {
     display: flex;
     justify-content: center;
     align-content: space-between;
+    align-items: center;
+    font-family: 'Rosewind', sans-serif;
+}
+
+#apropos{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
     font-family: 'Rosewind', sans-serif;
 }
@@ -250,14 +246,16 @@ scale: 0.7;
 
 .bg {
 mix-blend-mode:color-burn;
-filter: blur(4px) contrast(1.25) brightness(1.55) opacity(100%);
-scale: 100vh;
+filter: blur(8px) contrast(1.25) brightness(1.55) opacity(100%);
+width: 100%;
+height: 100vh;
 }
 .main_bg {
 background-color: #a085be;
 position: block;
 filter: opacity(50%);
-scale: 2.5;
+width: 101%;
+height: 100vh;
 z-index: -50;
 }
 
@@ -278,7 +276,7 @@ body {
 .container {
     height: 100vh;
     display: flex;
-flex-direction: grid;
+    align-items: center;
 }
 
 @media screen and (max-width: 750px)
