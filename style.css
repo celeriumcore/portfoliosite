@@ -6,6 +6,11 @@
     scroll-snap-type: y proximity;
 }
 
+::selection {
+    background-color: #a085be;
+    color: #151515;
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
