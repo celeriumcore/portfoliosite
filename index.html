@@ -21,7 +21,7 @@
 
 <div class="nav">
     <nav class="hover">
-        <ul>
+        <ul class="navstart">
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#apropos">A propos</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,14 +36,28 @@
         Développeur web / web mobile </h1>
 </section>
 
-<header>
-    <a class="logo" href="#acceuil"><img src="Images/logo.png"></a>
+<header class="header">
 
-    <nav class="bar">
+
+    
+    <div class="logo">
+        <a href="#acceuil">
+            <img src="Images/logo.png">
+        </a>
+    </div>
+
+    <div class="navigation">
+
+        <input type="checkbox" class="toggle-menu">
+        <div class="hamburger"></div>
+
+    <ul class="menu">
+        <li><a href="#acceuil">Acceuil</a></li>
         <li><a href="#apropos">A propos</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
-    </nav>
+    </ul>
+    </div>
 </header>
 
 <section id="apropos">
@@ -56,7 +70,7 @@
 <img src="Images/moi.png" class="moi">
 
 <div class="coucou">
-<p>salutation, je me présente Delahaye David ! né a Lens, vit à Lievin, je suis développeur web / web mobile Junior à 20 ans, poursuivant dans la formation "AFCI" à Liévin. j'ai pu accomplir la compréhention des bases des langages web (HTML, CSS, etc...), je maîtrise également des logiciels de traitement du type Photoshop, FL Studio et Sony vegas pro.
+<p>salutation, je me présente Delahaye David (ou Celerium si vous le voulez) !<br><br>Né a Lens, vit à Lievin, je suis développeur web / web mobile Junior à 20 ans, poursuivant dans la formation "AFCI" à Liévin.<br><br>j'ai pu accomplir la compréhention des bases des langages web (HTML, CSS, etc...), je maîtrise également des logiciels de traitement du type Photoshop, FL Studio et Sony vegas pro.
     <br><br>
 *Le chat n'est pas un employé, juste un support emotionel 😊*
 </p>
@@ -92,7 +106,7 @@
             <button type="submit">Envoyer</button>
         </form>
     </div>
+    <h6>© David Delahaye 2024</h6>
 </section>
-<!-- test -->
 </body>
 </html>
