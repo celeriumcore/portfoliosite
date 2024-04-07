@@ -591,17 +591,32 @@ h6 {
 }
 
 
+@media only screen and (max-width: 2560px)
+{
+.baracceuil{
+    width: 50%;
+}
+
+#contact {
+    scale: 150%;
+}
+}
 /*Téléphone*/
 
 @media only screen and (max-width: 600px)
 {
+
+    *{
+        scroll-snap-type: none;
+    }
+
     .hamburger, .toggle-menu{
         display: block;
     }
 
     header {
         position:fixed;
-        z-index: 999;
+        z-index: 900;
     }
     
     body{
@@ -650,11 +665,11 @@ h6 {
     }
 
     .deco{
-        scale: 35%;
+        scale: 30%;
     }
 
     h1{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .navstart{
@@ -697,16 +712,22 @@ h6 {
         justify-items: center;
     }
 
-    .logo img a{
+    .logo a {
+        position: block;
+    }
+    
+    .logo a img{
         display: block;
-        width: 25px;
+        width: 50px;
+        transition: 0.5s cubic-bezier(.42,1.95,.41,.31) ;
+    
     }
 
     .mestalents{
     display: flex;
     flex-direction: row;
     gap: 25px;
-    scale: 70%;
+    scale: 60%;
     }
 
     p{
@@ -714,7 +735,7 @@ h6 {
         text-align: center;
         justify-self: center;
         margin-right: 0;
-        width: 75%;
+        width: 60%;
     }
 
     .coucou {
