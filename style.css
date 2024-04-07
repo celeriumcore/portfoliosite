@@ -415,7 +415,7 @@ height: 100vh;
 background-color: #a085be;
 position: block;
 filter: opacity(50%);
-width: 101%;
+width: 105%;
 height: 100vh;
 z-index: -50;
 }
@@ -559,6 +559,10 @@ body {
     transition: 0.2s;
 }
 
+#contact{
+    scale: 100%;
+}
+
 .contact-left button:hover {
     scale: 98%;
     filter: brightness(115%) contrast(75%) hue-rotate(10deg);
@@ -591,7 +595,7 @@ h6 {
 }
 
 
-@media only screen and (max-width: 2560px)
+@media only screen and (width: 2560px)
 {
 .baracceuil{
     width: 50%;
@@ -762,6 +766,10 @@ h6 {
         width: 100%;
         padding-top: 15px;
         border-radius: 20px;
+    }
+
+    .contact{
+    scale: 100%;
     }
 
     .contact-left-title h4{
