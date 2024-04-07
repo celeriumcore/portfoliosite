@@ -648,11 +648,6 @@ h6 {
         pointer-events: auto;
     }
 
-    .menu li a:target ~ .menu{
-        opacity: 0%;
-        pointer-events: none;
-    }
-
 
     .menu li {
         width: 100%;
