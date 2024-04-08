@@ -367,6 +367,7 @@ section {
     border: 0px solid #ffffff;
     color: #ffffff;
     scroll-snap-align: start;
+    scroll-behavior:smooth ;
 }
 
 #contact, #projets {
@@ -801,6 +802,244 @@ h6 {
     .imgcontainer {
         position: absolute;
         width: 75%;
+        display: grid;
+        cursor: pointer;
+        overflow: hidden;
+    }
+}
+
+
+@media only screen and (max-width: 320px)
+{
+    h1{
+        font-size: 14px;
+    }
+
+    .deco {
+        scale: 25%;
+    }
+
+    .navstart{
+        font-size: 14px;
+        gap: 25px;
+    }
+
+    .hover a{
+        text-decoration: none;
+        color: #ffffff;
+        transition: .5s;
+    }
+    
+    .hover a:hover{
+    text-shadow: #ffffff 0 0 0px;
+    font-size: 14px;
+    }
+
+    h6 {
+        position: absolute;
+        transform: translate(0%, 350px);
+        font-size: 10px;
+        font-family: Adam, sans-serif;
+        text-transform: uppercase;
+    }
+
+    #apropos{
+        scale: 90%;
+    }
+
+    .moi{
+        scale: 55%;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+    h1{
+        font-size: 30px;
+    }
+
+    .deco{
+        scale: 60%;
+    }
+
+    .navstart{
+        font-size: 25px;
+        gap: 50px;
+    }
+
+    .hover a{
+        text-decoration: none;
+    }
+
+
+    h6 {
+        position: absolute;
+        transform: translate(0%, 350px);
+        font-size: 10px;
+        font-family: Adam, sans-serif;
+        text-transform: uppercase;
+    }
+
+    #apropos{
+        scale: 90%;
+    }
+
+    .moi{
+        scale: 55%;
+    }
+
+    *{
+        scroll-snap-type: none;
+    }
+
+    .hamburger, .toggle-menu{
+        display: block;
+    }
+
+    header {
+        position:fixed;
+        z-index: 900;
+    }
+    
+    body{
+        overflow-x: hidden;
+    }
+
+    .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #000000;
+        width: 100%;
+        height: 100vh;
+        padding-top: 65px;
+        opacity: 0%;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+
+    .navigation input:checked ~ .menu {
+        opacity: 100%;
+        pointer-events: auto;
+    }
+
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu li a {
+        padding: 30px;
+        font-size: 24px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+    }
+
+    .moi{
+        scale: 100%;
+    }
+
+    #apropos{
+        display: flex;
+        position: relative;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .propos{
+        display: grid;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    .logo a {
+        position: block;
+    }
+    
+    .logo a img{
+        display: block;
+        width: 60px;
+        transition: 0.5s cubic-bezier(.42,1.95,.41,.31) ;
+    
+    }
+
+    .mestalents{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    scale: 100%;
+    }
+
+    p{
+        font-size: 16px;
+        text-align: center;
+        justify-self: center;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .coucou {
+        position: relative;
+        top: 0%;
+        justify-items: center;
+    }
+
+    .cv{
+        position: relative;
+        right: 0%;
+        scale: 100%;
+    }
+
+    .cv:hover{
+        position: relative;
+        right: 0%;
+        scale: 98%;
+    }
+
+    .contact-left textarea{
+        height: 200px;
+        width: 600px;
+        padding-top: 15px;
+        border-radius: 20px;
+    }
+
+
+    .contact-left-title h4{
+        font-weight: 600px;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        letter-spacing: 3px;
+        margin-bottom: 5px;
+    }
+    
+    .contact-inputs{
+        width: 600px;
+        height: 40px;
+        border: none;
+        outline: none;
+        padding-left: 25px;
+        font-weight: 500;
+        border-radius: 15px;
+        font-family: Poppins, sans-serif;
+        background-color: #3a3a3a;
+        transition: .5s;
+        color: #ffffff;
+    }
+
+    h6 {
+        position: absolute;
+        transform: translate(0%, 400px);
+        font-size: 14px;
+        font-family: Adam, sans-serif;
+        text-transform: uppercase;
+    }
+    
+
+    .imgcontainer {
+        position: absolute;
+        width: 60%;
         display: grid;
         cursor: pointer;
         overflow: hidden;
