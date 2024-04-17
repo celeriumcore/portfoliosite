@@ -85,6 +85,8 @@ br {
     filter: drop-shadow(rgb(255, 255, 255, 0.75) 0 0 6px);
 }
 
+
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -93,15 +95,12 @@ br {
 
 .menu {
     display: flex;
-    justify-content: center;
     flex-direction: row;
     align-items: center;
     z-index: 1;
     transition: 0.5s;
-}
-
-.menu li{
-    list-style-type: none;
+    gap: 25px;
+    justify-content: center;
 }
 
 .menu a{
@@ -115,7 +114,8 @@ br {
     position: relative;
 }
 
-.menu a::before{
+
+.head::before{
     content: '';
     width: 0%;
     height: 2%;
@@ -125,8 +125,7 @@ br {
     background-color: #fff;
     transition: .75s;
 }
-
-.menu a::after{
+.head::after{
     content: '';
     width: 0%;
     height: 2%;
@@ -137,7 +136,28 @@ br {
     transition: .75s;
 }
 
-.menu a:hover::before , .menu a:hover::after{width: 100%;}
+.active::before{
+    content: '';
+    width: 0%;
+    height: 2%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    transition: .75s;
+}
+.active::after{
+    content: '';
+    width: 0%;
+    height: 2%;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: #ffffff;
+    transition: .75s;
+}
+
+.active::after, .active::before , .head:hover:before , .menu a:hover::after{width: 100%;}
 
 .hamburger {
     position: relative;
@@ -181,6 +201,10 @@ br {
 
 .hamburger, .toggle-menu{
     display: none;
+}
+
+.navigation{
+    width: 554px;
 }
 
 .navigation input:checked ~ .hamburger{
