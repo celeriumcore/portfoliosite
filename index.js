@@ -80,6 +80,7 @@ const isObserve1 = (entries) => {
     
     
     const loading = document.querySelector('.loading')
+    const loadingpage = document.querySelector('.loading-screen')
     const logo = document.querySelector('.logo-loading')
     const loaded = {duration: 1500, fill:'both', easing: "cubic-bezier(.74,.04,.98,.94)"}
     const loadedlogo = {delay: 750, duration: 450, fill:'both', easing: "cubic-bezier(.89,.01,.59,.74)"}
@@ -88,18 +89,17 @@ const isObserve1 = (entries) => {
     const loop = {iterations: Infinity , duration: 2000, fill: 'both', easing: 'cubic-bezier(.61,.07,.55,1)'}
     const logofx = [{transform: 'scale(1)'},{transform: 'scale(1.5)'},{transform: 'scale(0)'}]
     
-    logo.animate(rotate,loop)
     
     const textload = document.querySelector('h5');
     let intervalId;
     
-
-        intervalId = setInterval(changeText, 1000);
+    
+    intervalId = setInterval(changeText, 1000);
     
     function changeText() {
         // Récupérez le texte actuel
         let currentText = textload.innerText;
-    
+        
         // Déterminez quelle est la prochaine étape à effectuer en fonction du texte actuel
         if (currentText.endsWith('...')) {
             textload.innerText = 'Veuillez patienter, la page se charge entièrement';
@@ -110,8 +110,9 @@ const isObserve1 = (entries) => {
     
     const page= document.querySelector('*')
     page.style.overflow = 'hidden';
-
-
+    
+    logo.animate(rotate,loop)
+    
     window.addEventListener('load', () => {
         clearInterval(intervalId);
         loading.animate(nopastill,loaded)
@@ -122,5 +123,8 @@ const isObserve1 = (entries) => {
         setTimeout(() => {
             page.style.overflow = 'visible';
         }, 1500);
+        setTimeout(() => {
+            loadingpage.style.display = 'none';
+        }, 1700);
     })
-
+    
